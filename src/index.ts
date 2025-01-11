@@ -1,17 +1,16 @@
+ 
 import { Context, Schema, h } from 'koishi'
 
 export const name = 'hero-search'
 
-export interface Config {}
-
 export interface Config {
-  token: string
-  containUrl: bool
+  token: string;
+  containUrl: boolean;
 }
 
 export const Config: Schema<Config> = Schema.object({
-  token: Schema.string().required().description('你 SauceNAO.com 的 API Token'),
-  containUrl: Schema.boolean().default(1),
+  token: Schema.string().required().description('你的 SauceNAO.com 的 API Token'),
+  containUrl: Schema.boolean().default(true).description('是否包含链接'),
 })
 
 export function apply(ctx: Context, config: Config) {
@@ -30,13 +29,14 @@ export function apply(ctx: Context, config: Config) {
     await session.send("搜索原图中...");
     const client = sagiri(config.token);
     const results = await client(imgList[0]);
-    let msgList: string = "";
-    results.forEach(async (item) => {
-      msgList += `<message>${(config.containUrl?: `链接：${item.url}` : "")}
+    let msgList: string[] = [];
+    results.forEach((item) => {
+      msgList.push(`<message>${config.containUrl ? `链接：${item.url}\n` : ""}
 作者：${item.authorName}
 网站：${item.site}
-相似度：${item.similarity}</message>`;
-    })
-    await session.send(`<messages forward>${msgList}</messages>`);
-  })
+相似度：${item.similarity}</message>`);
+    });
+    await session.send(`<messages forward>${msgList.join()}</messages>`);
+  });
 }
+ 
