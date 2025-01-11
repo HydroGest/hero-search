@@ -1,6 +1,6 @@
 {
   "name": "koishi-plugin-hero-search",
-  "description": "一键提供图片反查原图出处，基于 SauceNAO 的图源搜索 API。可查插画和本子。",
+  "description": "我才是真正的英雄！一键通过图片反查原图出处，基于 SauceNAO 的图源搜索 API。可查插画和本子。",
   "version": "0.0.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -8,12 +8,21 @@
     "lib",
     "dist"
   ],
+  "contributors": [                         // 贡献者
+    "HydroGest <2445691453@qq.com>"
+  ],
+  "homepage": "https://github.com/HydroGest/hero-search",
+  "repository": {                           // 源码仓库
+    "type": "git",
+    "url": "git+https://github.com/hydrogest/hero-search.git"
+  },
   "license": "MIT",
   "scripts": {},
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin"
+    "plugin",
+    "image"
   ],
   "devDependencies": {},
   "peerDependencies": {
