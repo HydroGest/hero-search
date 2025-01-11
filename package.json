@@ -8,11 +8,11 @@
     "lib",
     "dist"
   ],
-  "contributors": [                         // 贡献者
+  "contributors": [
     "HydroGest <2445691453@qq.com>"
   ],
   "homepage": "https://github.com/HydroGest/hero-search",
-  "repository": {                           // 源码仓库
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/hydrogest/hero-search.git"
   },
