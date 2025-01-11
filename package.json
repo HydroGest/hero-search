@@ -1,0 +1,22 @@
+{
+  "name": "koishi-plugin-hero-search",
+  "description": "一键提供图片反查原图出处，基于 SauceNAO 的图源搜索 API。可查插画和本子。",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {},
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin"
+  ],
+  "devDependencies": {},
+  "peerDependencies": {
+    "koishi": "^4.18.3"
+  }
+}
