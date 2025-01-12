@@ -35,6 +35,8 @@ export function apply(ctx: Context, config: Config) {
 作者：${(item.authorName ? item.authorName: "未知")}
 网站：${item.site}
 相似度：${item.similarity}%</message>`);
+
+      ctx.logger.info(`#${item.index}: ${item.thumbnail}`)
     });
     await session.send(`<message forward>${msgList.join()}</message>`);
   });
