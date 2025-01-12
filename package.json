@@ -27,5 +27,8 @@
   "devDependencies": {},
   "peerDependencies": {
     "koishi": "^4.18.3"
-  }
+  },
+  "dependencies": {
+    "sagiri": "^4.3.0"
+    }
 }
