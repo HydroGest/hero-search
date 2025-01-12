@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-hero-search",
   "description": "我才是真正的英雄！一键通过图片反查原图出处，基于 SauceNAO 的图源搜索 API。可查插画和本子。",
-  "version": "0.0.1",
+  "version": "1.0.2",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
