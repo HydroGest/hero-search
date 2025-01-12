@@ -31,12 +31,11 @@ export function apply(ctx: Context, config: Config) {
     const results = await client(imgList[0]);
     let msgList: string[] = [];
     results.forEach((item) => {
-      msgList.push(`<message>${config.containUrl ? `链接：${item.url}\n` : ""}
-作者：${item.authorName}
+      msgList.push(`<message>${config.containUrl ? `链接：${item.url}\n` : ""}作者：${item.authorName}
 网站：${item.site}
 相似度：${item.similarity}</message>`);
     });
-    await session.send(`<messages forward>${msgList.join()}</messages>`);
+    await session.send(`<message forward>${msgList.join()}</message>`);
   });
 }
  
